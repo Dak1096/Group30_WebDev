@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth_guard.js"></script>
+</head>
+<body>
+    <div id="sidebar"></div>
+    <main class="main">
+        <h1>Dashboard</h1>
+        <div class="stats"> <!--Tạo ô chứa 3 card-->
+            <div class="card">
+                <div class="text">Total students</div> <!--"text" để chỉnh chữ trong card-->
+                <div class="statNumber" id="totalStudents">...</div><!--"statNumber" để chỉnh số trong card-->
+                <!--"totalStudents" để xác định số lượng sinh viên-->
+            </div>
+            <div class="card">
+                <div class="text">Total courses</div>
+                <div class="statNumber" id="totalCourses">...</div>
+            </div>
+            <div class="card">
+                <div class="text">Average grade</div>
+                <div class="statNumber" id="averageGrade">...</div>
+            </div>
+        </div>
+        <p id="dashError" class="error"></p>
+    </main>
+    <script type="module" src="js/dashboard.js"></script> <!-- Dựa theo file dashboard.js để showdata trên dashboard -->
+</body>
+</html>

@@ -1,152 +1,120 @@
-/* Remove default spacing */
-
-* {
-    box-sizing: border-box;
+body {
+    margin: 0;
+    background: #f3f4f6;
+    font-family: Arial, sans-serif;
 }
 
+h2 {
+    width: 340px;
+    margin: 100px auto 20px;
+    color: #1f2937;
+}
+
+/* Form login */
+#loginForm {
+    width: 340px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Input */
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 9px 10px;
+    margin-bottom: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+/* Nút đăng nhập */
+#loginForm input[type="submit"] {
+    width: 100%;
+    padding: 9px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Hover */
+#loginForm input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+/* Thông báo lỗi */
+#loginError {
+    color: #dc2626;
+    font-size: 14px;
+}
+/* ==================== DASHBOARD ==================== */
 
 body {
     margin: 0;
-
     font-family: Arial, sans-serif;
-
-    background-color: #f4f6f8;
+    background: #f3f4f6;
 }
 
-
-/* ================= NAVIGATION BAR ================= */
-
-.sidebar {
-
-    position: fixed;
-
-    left: 0;
-    top: 0;
-
-    width: 230px;
-
-    height: 100vh;
-
-    background-color: #222;
-
-    padding: 20px;
-}
-
-
-.sidebar h2 {
-
-    color: white;
-
-    text-align: center;
-
-    margin-bottom: 30px;
-}
-
-
-/* Navigation buttons */
-
-.sidebar button {
-
-    width: 100%;
-
-    padding: 12px;
-
-    margin-bottom: 10px;
-
-    border: none;
-
-    border-radius: 5px;
-
-    background-color: #333;
-
-    color: white;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    text-align: left;
-}
-
-
-.sidebar button:hover {
-
-    background-color: #555;
-
-}
-
-
-/* ================= MAIN CONTENT ================= */
-
+/* Phần nội dung bên phải sidebar */
 .main {
-
-    margin-left: 230px;
-
+    margin-left: 220px;
     padding: 30px;
 }
 
-
-/* ================= PAGES ================= */
-
-.page {
-
-    display: none;
-
-    background-color: white;
-
-    padding: 30px;
-
-    border-radius: 10px;
-}
-
-
-/* Home is shown first */
-
-#home {
-
-    display: block;
-
-}
-
-
-/* ================= DASHBOARD ================= */
-
-.dashboard-container {
-
-    display: flex;
-
-    gap: 20px;
-
-    margin-top: 20px;
-}
-
-
-.card {
-
-    width: 220px;
-
-    padding: 25px;
-
-    background-color: #f1f1f1;
-
-    border-radius: 10px;
-
-    text-align: center;
-}
-
-
-.card h3 {
-
+/* Tiêu đề Dashboard */
+.main h1 {
     margin-top: 0;
-
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #1f2937;
 }
 
+/* Khu vực chứa 3 card */
+.stats {
+    display: flex;
+    gap: 20px;
+}
 
-.card p {
+/* Mỗi card */
+.card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
 
-    font-size: 30px;
+/* Chữ mô tả */
+.muted {
+    color: #6b7280;
+    font-size: 14px;
+}
 
+/* Con số lớn */
+.statNumber {
+    margin-top: 10px;
+    font-size: 28px;
     font-weight: bold;
+    color: #111827;
+}
 
-    margin-bottom: 0;
+/* Thông báo lỗi */
+.error {
+    margin-top: 20px;
+    color: #dc2626;
 }

@@ -355,3 +355,9 @@ The load test exercises one endpoint only. Write endpoints were covered by the i
 Read `innodb_ft_min_token_size` from MySQL at startup instead of from `.env`, so the two values can never disagree again.
 
 Add an audit log table that records who changed what, rather than soft delete. Soft delete would conflict with the unique email column and with the cascade on grades.
+
+# III. Conclusion
+
+- The frontend of the Student Management System fully covers its core features: login, summary statistics, student management, course management, and grading. Building it with plain HTML/CSS/JavaScript keeps the project simple, lightweight, and easy to understand
+- The backend covers all of the functions above, allowing teachers to handle the most important things a Student Management System can allow. Using Node.js, Express and MySQL keeps the project simple but effective for dealing with table-based data.
+- Although there is room for improvements, this system can run and execute its functions efficiently as it is right now.

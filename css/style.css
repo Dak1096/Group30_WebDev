@@ -1,0 +1,30 @@
+/* Language: CSS (css/style.css)
+   Shared by Overview.html and Dashboard.html.
+   Only what both pages use: colour tokens, reset, base body, role dots. */
+
+/* ===== Tokens ===== */
+:root {
+    --navy: #0d3b8e;
+    --navy-dark: #082a66;
+    --red: #e2231a;
+    --red-hover: #c41a12;
+    --text: #1b2437;
+    --muted: #6b7488;
+    --line: #dfe3ec;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Montserrat", "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ===== Role dots ===== */
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.dot.student { background: #2f6fed; }
+.dot.teacher { background: #16a37f; }
+.dot.admin { background: #e0952b; }
+.dot.viewer { background: #2f6fed; }

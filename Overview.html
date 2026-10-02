@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage - Student portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/overview.css">
+</head>
+<body>
+
+    <!-- Tạo background bị làm mờ-->
+    <div class="bg-photo" aria-hidden="true"></div>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <div class="page">
+
+        <!-- Tạo thanh công cụ ở đầu trang ghi "Contact us" -->
+        <div class="topbar">
+            <div class="container topbar-inner">
+                <div class="topbar-left">
+                    
+                </div>
+                <a href="#" class="topbar-link">Contact us</a>
+            </div>
+        </div>
+
+        <!-- Tạo thanh điều hướng chứa các mục:Home, Classes,... -->
+        <header class="navbar">
+            <div class="container navbar-inner">
+                <a href="#" class="logo">
+                    <img src="images/usth-logo.png" alt="USTH" class="logo-img"
+                         onerror="this.remove()"
+                         onload="this.nextElementSibling.style.display='none'">
+                    <span class="logo-mark">◆</span>
+                    <span class="logo-name">EDU<span>MANAGE</span></span>
+                </a>
+
+                <nav class="menu" aria-label="Main">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Classes</a>
+                    <a href="#">Schedule</a>
+                    <a href="#">Grades</a>
+                    <a href="#">Contact</a>
+                </nav>
+
+                <button type="button" class="btn btn-red btn-small" data-open>Sign in</button>
+            </div>
+        </header>
+
+        <!-- Nội dung chính của trang, gồm mấy câu quote, nút "Sign in" và "Learn more" -->
+        <main class="hero">
+            <div class="container hero-inner">
+
+                <div class="hero-text">
+                    <h1>Every great discovery begins with a question.</h1>
+                    <p>Sign in to see your classes, schedule and grades.</p>
+                    <div class="hero-actions">
+                        <button type="button" class="btn btn-red" data-open>Sign in</button>
+                        <a href="#" class="btn btn-outline">Learn more</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">© 2026 EduManage · Your campus, online.</footer>
+    </div>
+
+
+    <!-- Phần cửa sổ đăng nhập -->
+    <div class="modal" id="loginModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+
+        <div class="login-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button type="button" class="modal-close" data-close aria-label="Close sign in">×</button>
+
+            <div class="login-head">
+                <h2 id="loginTitle">Sign in</h2>
+                <p>Welcome back to EduManage</p>
+            </div>
+
+            <form class="login-form" novalidate>
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username"
+                           placeholder="Username" autocomplete="username">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" name="password"
+                               placeholder="Password" autocomplete="current-password">
+                        <button type="button" class="password-toggle" aria-label="Show password">Show</button>
+                    </div>
+                </div>
+
+                <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
+
+                <!-- Tạo mục "Remember me", "liên kết password", nút "Sign in" và Access for:...-->
+                <div class="form-row">
+                    <label class="remember">
+                        <input type="checkbox" id="remember"> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-red btn-block">Sign in</button>
+            </form>
+
+            <div class="roles">
+                <span>Access for:</span>
+                <span class="role"><i class="dot student"></i>Student</span>
+                <span class="role"><i class="dot teacher"></i>Teacher</span>
+                <span class="role"><i class="dot admin"></i>Administrator</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/overview.js"></script>
+</body>
+</html>

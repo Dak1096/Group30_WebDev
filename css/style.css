@@ -1,120 +1,30 @@
-body {
-    margin: 0;
-    background: #f3f4f6;
-    font-family: Arial, sans-serif;
+/* Language: CSS (css/style.css)
+   Shared by Overview.html and Dashboard.html.
+   Only what both pages use: colour tokens, reset, base body, role dots. */
+
+/* ===== Tokens ===== */
+:root {
+    --navy: #0d3b8e;
+    --navy-dark: #082a66;
+    --red: #e2231a;
+    --red-hover: #c41a12;
+    --text: #1b2437;
+    --muted: #6b7488;
+    --line: #dfe3ec;
+    --ease: cubic-bezier(.2, .8, .2, 1);
 }
 
-h2 {
-    width: 340px;
-    margin: 100px auto 20px;
-    color: #1f2937;
-}
-
-/* Form login */
-#loginForm {
-    width: 340px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    box-sizing: border-box;
-
-    background: white;
-    border-radius: 6px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
-}
-
-/* Input */
-#loginForm input[type="text"],
-#loginForm input[type="password"] {
-    width: 100%;
-    box-sizing: border-box;
-
-    padding: 9px 10px;
-    margin-bottom: 12px;
-
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-
-    font-size: 14px;
-}
-
-/* Nút đăng nhập */
-#loginForm input[type="submit"] {
-    width: 100%;
-    padding: 9px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: #2563eb;
-    color: white;
-
-    font-size: 14px;
-    cursor: pointer;
-}
-
-/* Hover */
-#loginForm input[type="submit"]:hover {
-    background: #1d4ed8;
-}
-
-/* Thông báo lỗi */
-#loginError {
-    color: #dc2626;
-    font-size: 14px;
-}
-/* ==================== DASHBOARD ==================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
+    font-family: "Montserrat", "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
 }
 
-/* Phần nội dung bên phải sidebar */
-.main {
-    margin-left: 220px;
-    padding: 30px;
-}
-
-/* Tiêu đề Dashboard */
-.main h1 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 28px;
-    color: #1f2937;
-}
-
-/* Khu vực chứa 3 card */
-.stats {
-    display: flex;
-    gap: 20px;
-}
-
-/* Mỗi card */
-.card {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* Chữ mô tả */
-.muted {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-/* Con số lớn */
-.statNumber {
-    margin-top: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #111827;
-}
-
-/* Thông báo lỗi */
-.error {
-    margin-top: 20px;
-    color: #dc2626;
-}
+/* ===== Role dots ===== */
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.dot.student { background: #2f6fed; }
+.dot.teacher { background: #16a37f; }
+.dot.admin { background: #e0952b; }
+.dot.viewer { background: #2f6fed; }

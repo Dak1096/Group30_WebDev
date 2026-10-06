@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduManage - Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><i>◆</i>EDU<span>MANAGE</span></div> <!--Tạo logo EDUMANAGE-->
+    <nav class="nav" id="nav" aria-label="Dashboard"></nav><!-- Chèn các mục menu Students, Courses, Grades-->
+    <div class="demo">
+      <label>Backend</label>
+      <p id="apiInfo">Connecting...</p>
+      <p>Buttons are hidden for viewers, and the server rejects their writes with 403 anyway.</p>
+    </div>
+  </aside>
+  <div>
+    <header class="top">
+      <h1 id="title"></h1>
+      <!--Hiện thông tin ng dùng góc trên phải--> 
+      <div class="who"><span class="name" id="uname"></span><span class="badge" id="ubadge"></span><a href="Overview.html"><button class="out" type="button">Sign out</button></a></div>
+    </header>
+    <main id="view"></main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><!---Hiện những thông báo nhỏ như:Student added, Course added,..-->
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
